@@ -1,0 +1,19 @@
+{
+  "name": "forest-portfolio",
+  "version": "1.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "build",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "normalize-css": "^7.0.0",
+    "picturefill": "^3.0.2",
+    "css-hamburgers": "^0.8.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.0"
+  }
+}

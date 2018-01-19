@@ -1,0 +1,33 @@
+include _mixins
+include _head
+
+
+doctype
+html(lang="en").no-js
+  block head
+    head
+      +head({
+        "title": "start-kit-project",
+        "author": "Anatoliy Vershinin",
+        "description": "Worshop"
+      })
+    |
+ 
+    body
+      |
+      |
+      <!--[inf lt IE 10]
+          p.browsehappy
+            | Вы используете strong устаревший  браузер.
+            | Пожалуйста a.(href="http://browsehappy.com/") обновите его.
+      <![endif]-->
+      |
+      |
+      block content
+      |
+      |
+      block vendors
+        script(src='js/bundle.js')
+      |
+      block scripts
+        script(src='js/app.js')

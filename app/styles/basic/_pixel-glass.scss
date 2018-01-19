@@ -1,0 +1,30 @@
+html {
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+@media screen and (min-width: 320px) {
+  html {
+    background-image: url("../../img/preview/buffalo-index-desktop.jpg");
+  }
+
+}
+@media screen and (min-width: 480px) {
+  html {
+    background-image: url("../../img/preview/buffalo-index-desktop.jpg");
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    background-image: url("../../img/preview/buffalo-index-desktop.jpg");
+  }
+}
+@media screen and (min-width: 992px) {
+  html {
+    background-image: url("../../img/preview/buffalo-index-desktop.jpg");
+  }
+}
+@media screen and (min-width: 1200px) {
+  html {
+    background-image: url("../../img/preview/buffalo-index-desktop.jpg");
+  }
+}

@@ -1,0 +1,321 @@
+
+//* миксины/расширения*//
+%clearfix {
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+@mixin clearfix {
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+//сброс отступов у списка
+%ul-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+//скрываем элемент
+%visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+//показываем элемент
+%visually-view {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: auto;
+  padding: auto;
+  border: transparent;
+  clip: auto;
+  overflow: auto;
+}
+//абсолютное центрирование
+%absolute-center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+//абсолютное центрирование блока если неизвестны ширина & высота
+%center-both {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+//абсолютное выравнивание по высоте если известна высота
+@mixin center-h($height) {
+  position: absolute;
+  top: 50%;
+  height: $height;
+  margin-top: -($height / 2);
+}
+//выравнивание по высоте блочного элем. если известна высота
+%center-h--unk {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+//растягивание фона
+%cover {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+//выравнивание текста по ширине
+%justify {
+  text-align: justify;
+  line-height: 0;
+  font-size: 0;
+  text-justify: newspaper;
+  zoom: 1;
+  text-align-last: justify;
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+  }
+}
+//скрытие текста, аналог text-indent
+%text-overflow {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@mixin inline-block($valign: top) {
+  display: inline-block;
+  vertical-align: $valign;
+}
+//convert px to rem
+@function rem($px) {
+  @return $px / 16px+0rem;
+}
+
+//перевод px в rem-ы
+@function rem($px) {
+  // @return $px/$font-size-base + 0rem;
+  @return ($px/$font-size-base) * 1rem;
+}
+
+//пример ретины
+@media #{$retina} {
+  .selector {
+  }
+}
+
+//responsive mixins for desktop content
+@mixin desktop-big {
+  @media screen and #{($lg-point-df)} {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and #{($lg-point-df)} {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and #{($md-point-df)} {
+    @content;
+  }
+}
+@mixin tablets {
+  @media screen and #{($sm-point-df)} {
+    @content;
+  }
+}
+@mixin phones {
+  @media screen and #{($xs-point-df)} {
+    @content;
+  }
+}
+@mixin landscape {
+  @media screen and (orientation: landscape) {
+    @content;
+  }
+}
+@mixin portrait {
+  @media screen and (orientation: portrait) {
+    @content;
+  }
+}
+
+//responsive font-size for rem
+@mixin font-size-base {
+  font-size: $font-size-phone;
+  @media screen and #{($xs-point-mf)} {
+    font-size: $font-size-tablet;
+  }
+  @media screen and #{($sm-point-mf)} {
+    font-size: $font-size-laptop;
+  }
+  @media screen and #{($md-point-mf)} {
+    font-size: $font-size-desktop;
+  }
+  @media screen and #{($lg-point-mf)} {
+    font-size: $font-size-xl;
+  }
+  //@media screen and #{($xlg-point-mf)} {
+  //  font-size: $font-size-xlx;
+  //}
+}
+//контейнер desktop фикс px
+%container-desktop-fix {
+  min-width: 320px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  @media screen and #{($xlg-point-df)} {
+    width: $xlg-fix-width; //1600
+    padding: 0 30px;
+  }
+  @media screen and #{($lg-point-df)} {
+    width: $lg-fix-width; //1200
+    padding: 0 15px;
+  }
+  @media screen and #{($md-point-df)} {
+    width: $md-fix-width; //992
+  }
+  @media screen and #{($sm-point-df)} {
+    width: $sm-fix-width; //768
+    padding: 0 20px;
+  }
+  @media screen and #{($xs-point-df)} {
+    // width: $xs-fix-width; //540
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+//контейнер desktop резиновый px
+%container-desktop-fluid {
+  max-width: $xlg-width;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 1.25%; //30
+  box-sizing: border-box;
+  @media screen and #{($lg-point-df)} {
+    max-width: $lg-width;
+    padding: 0 1.25%;
+  }
+  @media screen and #{($md-point-df)} {
+    max-width: $md-width;
+    padding: 0 2.5%;
+  }
+  @media screen and #{($sm-point-df)} {
+    max-width: $sm-width;
+    padding: 0 2%;
+  }
+  @media screen and #{($xs-point-df)} {
+    max-width: $xs-width;
+    padding: 0 2%;
+  }
+}
+//контейнер mobile резиновый px
+%container-mobile-fluid {
+  margin: 0 auto;
+  box-sizing: border-box;
+  @media screen and #{($xs-point-df)} {
+    min-width: $xs-width;
+    padding: 0 2%;
+  }
+  @media screen and #{($sm-point-df)} {
+    min-width: $sm-width;
+    padding: 0 2%;
+  }
+  @media screen and #{($md-point-df)} {
+    min-width: $md-width;
+    padding: 0 2.5%;
+  }
+  @media screen and #{($lg-point-df)} {
+    min-width: $lg-width;
+    padding: 0 1.25%;
+  }
+  @media screen and #{($xlg-point-df)} {
+    min-width: $xlg-width;
+    padding: 0 1.25%; //30
+  }
+}
+
+//стрелка
+@mixin arr($width, $height, $bg, $direction) {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  @if ( $direction == top) {
+    border-width: 0 $width/2 + px $height + px $width/2 + px;
+    border-color: transparent transparent $bg transparent;
+  }
+  @if ( $direction == right) {
+    border-width: $height/2 + px 0 $height/2 + px $width + px;
+    border-color: transparent transparent transparent $bg;
+  }
+  @if ( $direction == bottom) {
+    border-width: $height + px $width/2 + px 0 $width/2 + px;
+    border-color: $bg transparent transparent transparent;
+  }
+  @if ( $direction == left) {
+    border-width: $height/2 + px $width + px $height/2 + px 0;
+    border-color: transparent $bg transparent transparent;
+  }
+  @if ( $direction == top-left) {
+    border-width: $height + px $width + px 0 0;
+    border-color: $bg transparent transparent transparent;
+  }
+  @if ( $direction == top-right) {
+    border-width: 0 $width + px $height + px 0;
+    border-color: transparent $bg transparent transparent;
+  }
+  @if ( $direction == bottom-right) {
+    border-width: 0 0 $height + px $width + px;
+    border-color: transparent transparent $bg transparent;
+  }
+  @if ( $direction == bottom-left) {
+    border-width: $height + px 0 0 $width + px;
+    border-color: transparent transparent transparent $bg;
+  }
+}
+@mixin circle($width, $color) {
+  width: $width;
+  height: $width;
+  border-radius: $width/2;
+  background-color: $color;
+}
+
+// миксин placeholder
+@mixin placeholder() {
+  $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
+  @each $placeholder in $placeholders {
+    &:#{$placeholder}-placeholder {
+      @content;
+    }
+  }
+}
+
+//миксин скрытия текста
+@mixin hide-text() {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+}

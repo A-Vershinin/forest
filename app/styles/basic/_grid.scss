@@ -1,0 +1,41 @@
+$cols: 12;
+$gutter: 40px;
+// $col: calc(100% / $cols)
+// $col: 5.2%
+%container {
+	margin: 0 auto;
+	box-sizing: border-box;
+	display: flex;
+	@media screen and #{($xlg-point-df)} {
+		max-width: $xlg-fix-width;
+		padding: 0 1.25%; //30
+	}
+	@media screen and #{($lg-point-df)} {
+		max-width: $lg-fix-width;
+		padding: 0 1.25%;
+	}
+	@media screen and #{($md-point-df)} {
+		max-width: $md-fix-width;
+		padding: 0 2.5%;
+	}
+	@media screen and #{($sm-point-df)} {
+		max-width: $sm-fix-width;
+		padding: 0 2%;
+	}
+	@media screen and #{($xs-point-df)} {
+		max-width: $xs-fix-width;
+		padding: 0 2%;
+	}
+}
+
+//миксин контейнера flex
+@mixin container($align:space-between, $wrap:wrap) {
+  @extend %container;
+  justify-content: $align;
+  flex-wrap: $wrap;
+}
+
+//колонки
+@mixin col($num) {
+  width: calc( (((100% - (#{$gutter} * (#{$cols} - 1))) / #{$cols}) * #{$num}) + ( #{$gutter} * (#{$num} - 1)) );
+}

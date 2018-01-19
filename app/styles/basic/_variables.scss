@@ -1,0 +1,86 @@
+//Переменные//
+//Шрифты//
+$font-base: "Roboto", "Arial", sans-serif;
+$fotn-second: "Roboto", "Arial", sans-serif;
+
+//Цвета, фон//
+$accent: #ff5912;
+$accent-active: darken($accent, 20%);
+
+$gray-1: #34404b;
+$gray-2: #3c4751;
+$gray-3: #495662;
+$gray-4: #7c8791;
+$gray-5: #28313b;
+
+
+
+$orange-1: #f7921f;
+$orange-1-hover: darken(#f7921f, 10%);
+$blue-1: #3ab3ff;
+$red-1: #e12e3f;
+$green-1: #2fd967;
+
+$light-1: #ffffff;
+$light-2: #808080;
+$light-3: #a6a6a6;
+
+$black-1: #000000;
+
+//background-colors:
+$bg-1: #ffffff;
+$bg-2: #6a7079;
+
+//$bg-image-1: linear-gradient(
+//	to right,
+//	rgba(0, 0, 0, 0.2) 0%,
+//	rgba(0, 0, 0, 0.2) 1%,
+//	transparent 100%
+//);
+
+//shadows, borders, rgba, other
+$border-1: rgba(230, 235, 235, 0.5);
+
+//размер шрифта//
+$font-size-xlx: 15px;
+$font-size-xl: 13px;
+$font-size-desktop: 10px;
+$font-size-laptop: 9px;
+$font-size-tablet: 8px;
+$font-size-phone: 7px;
+
+//$font-size-base: 10px;
+$font-size-base: $font-size-desktop;
+$line-height-base: 14px/$font-size-base;
+
+//брейкпоинты//
+//Mobile First//
+$xlg-point-mf: "(min-width: 1600px)";
+$lg-point-mf: "(min-width: 1200px)";
+$md-point-mf: "(min-width: 992px)";
+$sm-point-mf: "(min-width: 768px)";
+$xs-point-mf: "(min-width: 540px)";
+
+//Desktop First//
+$xlg-point-df: "(max-width: 1600px)";
+$lg-point-df: "(max-width: 1200px)";
+$md-point-df: "(max-width: 992px)";
+$sm-point-df: "(max-width: 768px)";
+$xs-point-df: "(max-width: 540px)";
+
+//ширина контейнера//
+$xlg-width: 1600px;
+$lg-width: 1200px;
+$md-width: 992px;
+$sm-width: 768px;
+$xs-width: 480px;
+
+//ширины контейнера фикс//
+$xlg-fix-width: 1600px;
+$lg-fix-width: 1200px;
+$md-fix-width: 992px;
+$sm-fix-width: 720px;
+$xs-fix-width: 540px;
+
+//Ретина//
+$retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";

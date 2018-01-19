@@ -1,0 +1,45 @@
+mixin list (className, items, activeItem)
+  nav(class=`#{className}`)
+    ul(class="#{className}__list")
+      each nav, ndx in items
+        li(class="#{className}__item")
+          a(href="#" class="#{className}__link" + ((ndx == activeItem) ? "#{className}__link--active" : "" ))=nav
+
+mixin icon(classNameIcon, name, size)
+  - var size = size || 20;
+  - var sprite = "img/svg-icon-sprite.svg"
+  - var prefix = "icon-"
+
+  span(aria-hidden="true", class=classNameIcon)
+    svg(viewBox='0 0 ' + size + ' ' + size width=size height=size)
+      use(xlink:href=sprite + "#" + prefix + name)
+      
+mixin svg-inline(name)
+  svg.icon(class= name)
+    use(xlink:href=`#${name}`)
+
+mixin icon-awesome(nameIcon)
+  i&attributes(attributes)(class=`fa ${nameIcon.replace(/(\S+\b)/g, 'fa-$1')}` aria-hidden='true')
+  
+    
+mixin img(className)
+  picture
+    source(type="image/webp" media="(min-width: 1200px)"
+    srcset="img/photo-1-desktop.webp 1x, img/photo-1-desktop@2x.webp 2x")
+    source(type="image/webp" media="(min-width: 768px)"
+    srcset="img/photo-1-tablet.webp 1x, img/photo-1-tablet@2x.webp 2x")
+    source(type="image/webp"
+    srcset="img/photo-1-mobile.webp 1x, img/photo-1-mobile@2x.webp 2x")
+    |
+    source(media="(min-width: 1200px)"
+    srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x")
+    source(media="(min-width: 768px)"
+    ssrcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x")
+    img(src="img/photo-1-mobile.jpg"
+    srcset="img/photo-1-mobile@2x.jpg 2x"
+    alt="Logotype", class="#{className}__img")
+
+mixin pixel-glass()
+  style
+    include ../../styles/basic/_pixel-glass.scss
+    
