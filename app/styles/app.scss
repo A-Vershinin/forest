@@ -9,21 +9,25 @@
 @import "./basic/_fonts.scss";
 @import "./basic/_grid.scss";
 @import "./basic/_main.scss";
+@import "./basic/pixel-glass.scss";
 // @import "sprites/sprite.scss";
 
 // BEM-блоки //
 // index.html
+@import "blocks/_content.scss";
 @import "blocks/_wrapper.scss";
 @import "blocks/_btn.scss";
-//@import "blocks/_socials.scss";
+@import "blocks/_socials.scss";
 //@import "blocks/_contact-form.scss";
 //@import "blocks/_logo.scss";
 //@import "blocks/_search.scss";
 //@import "blocks/_menu.scss";
-//@import "blocks/_content.scss";
 //@import "blocks/_scrollup.scss";
+@import "blocks/_user.scss";
+@import "blocks/_copyright.scss";
 
 
 // layout-секции //
 @import "./layout/_header.scss";
 @import "./layout/_footer.scss";
+@import "./layout/_welcome.scss";

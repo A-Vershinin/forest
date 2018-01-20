@@ -1,26 +1,29 @@
 .socials {
   @extend %ul-reset;
   font-size: 0;
-  text-align: right;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
 }
 .socials__item {
   display: inline-block;
   vertical-align: middle;
-  margin-left: 10%;
-  font-size: 16px;
-  &:first-child {
-    margin-left: 0;
+  font-size: 1rem;
+  &:not(:last-child) {
+    margin-right: 28px;
   }
 }
 .socials__link {
   display: block;
-  width: 20px;
-  height: 20px;
-  text-decoration: none;
-  cursor: pointer;
+  height: 100%;
+  //width: 20px;
+  //height: 20px;
+  //text-decoration: none;
+  //cursor: pointer;
   transition: 0.25s;
   svg {
-    fill: $gray-1;
+    fill: #ffffff;
   }
   &:hover {
     svg {
@@ -33,12 +36,7 @@
     }
   }
 }
-// @media screen and #{($laptop-point-widths-des)} {
-//
-// }
-// @media screen and #{($tablet-point-widths-des)} {
-//
-// }
-// @media screen and #{($phone-point-widths-des)} {
-//
-// }
+.socials__icon {
+  display: inline-block;
+  font-size: 0;
+}

@@ -24,6 +24,22 @@
 	font-weight: 700;
 	font-style: normal;
 }
+/* font-family: "RobotoLight"; */
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto/RobotoLight/roboto-light.woff") format("woff"),
+  url("../fonts/Roboto/RobotoLight/roboto-light.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+/* font-family: "SansusWebissimoRegular"; */
+@font-face {
+  font-family: "SansusWebissimo";
+  src: url("../fonts/SansusWebissimo/SansusWebissimoRegular/sansus-webissimo-regular.woff") format("woff"),
+  url("../fonts/SansusWebissimo/SansusWebissimoRegular/sansus-webissimo-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
 /* font-family: "Font Awesome"; */
 @font-face {
 	font-family: "FontAwesome";

@@ -1,0 +1,17 @@
+.copyright {
+  display: block;
+}
+.copyright__text {
+  flex: 2 0 100%;
+  //padding: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  font-family: $font-base;
+  font-weight: 400;
+  color: #ffffff;
+  padding: 0 1rem;
+  text-align: center;
+  &:not(:last-child) {
+    border-right: 1px solid #ffffff;
+  }
+}

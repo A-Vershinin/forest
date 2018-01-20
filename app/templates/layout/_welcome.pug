@@ -1,0 +1,28 @@
+section.welcome
+  .welcome__bg
+    picture
+      source(type="image/webp" srcset="img/bg/forest-desktop.webp 1x, img/bg/forest-desktop.webp 2x")
+      img(src="img/bg/forest-desktop.jpg" srcset="img/bg/forest-desktop.jpg 2x"
+       alt="wecolme background", class="welcome__bg-img")
+  .welcome__box
+    .welcome__box-inner
+      .welcome__info
+        .welcome__user
+          .user
+            .user__avatar
+              picture
+                source(type="image/webp" srcset="img/content/avatar.jpg 1x, img/content/avatar.jpg 2x")
+                img(src="img/content/avatar.jpg" srcset="img/content/avatar.jpg 2x"
+                  alt="wecolme background", class="user__avatar-img")
+            h1.user__name Владимир Астахов    
+            .user__desc Личный сайт веб-разработчика
+        .welcome__socials      
+          include ../blocks/_socials
+      nav.welcome__nav
+        a(href="").btn.welcome__nav-link Мои работы
+        a(href="").btn.welcome__nav-link Обо мне
+  .welcome__copyright
+    .copyright
+      span.copyright__text &copy; Анатолий Вершинин
+      span.copyright__text 2017
+    

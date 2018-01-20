@@ -1,11 +1,12 @@
 //Переменные//
 //Шрифты//
 $font-base: "Roboto", "Arial", sans-serif;
-$fotn-second: "Roboto", "Arial", sans-serif;
+$fotn-second: "SansusWebissimo", "Arial", sans-serif;
 
 //Цвета, фон//
-$accent: #ff5912;
-$accent-active: darken($accent, 20%);
+$accent: #6c9c5a;
+$accent-hover: #4e8839;
+$accent-active: darken($accent, 10%);
 
 $gray-1: #34404b;
 $gray-2: #3c4751;
@@ -51,7 +52,9 @@ $font-size-phone: 7px;
 
 //$font-size-base: 10px;
 $font-size-base: $font-size-desktop;
-$line-height-base: 14px/$font-size-base;
+//$font-size-base: 2vmin;
+//$line-height-base: 14px/$font-size-base;
+$line-height-base: 1.4;
 
 //брейкпоинты//
 //Mobile First//
