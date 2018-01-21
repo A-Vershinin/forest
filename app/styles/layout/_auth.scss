@@ -1,7 +1,4 @@
-.welcome {
-  //position: absolute;
-}
-.welcome__bg {
+.auth__bg {
   position: absolute;
   z-index: 50;
   left: 50%;
@@ -11,11 +8,11 @@
   width: 100%;
   height: 100%;
 }
-.welcome__bg-img {
+.auth__bg-img {
   width: 100%;
   height: 100%;
 }
-.welcome__box {
+.auth__box {
   position: absolute;
   z-index: 80;
   top: 50%;
@@ -23,7 +20,7 @@
   transform: translate(-50%, -50%) rotateY(0deg);
   width: 380px;
 }
-.welcome__box-inner {
+.auth__box-inner {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,13 +30,13 @@
   backface-visibility: hidden;
   overflow: hidden;
 }
-.welcome__info {
+.auth__info {
   padding: 4rem 2rem 3rem 2rem;
 }
-.welcome__user {
-  margin-bottom: 2rem;
+.auth__form {
+
 }
-.welcome__nav {
+.auth__nav {
   background-color: rgba(108, 156, 90, 0.7);
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
@@ -48,7 +45,7 @@
   justify-content: space-between;
   align-items: center;
 }
-.welcome__nav-link {
+.auth__nav-link {
   flex-basis: 50%;
   line-height: 3rem;
   font-weight: 500;
@@ -60,10 +57,11 @@
     border-right: 0.125rem solid rgba(255, 255, 255, 0.5);
   }
 }
-.welcome__copyright {
+.auth__copyright {
   position: absolute;
   z-index: 70;
   bottom: 5rem;
   left: 50%;
   transform: translateX(-50%);
 }
+

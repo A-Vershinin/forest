@@ -2,7 +2,7 @@
   "name": "forest-portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "Start template for new projects",
+  "description": "My portfolio",
   "author": "Anatoliy Vershinin",
   "main": "gulpfile.js",
   "repository": {

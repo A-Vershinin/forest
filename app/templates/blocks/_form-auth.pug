@@ -1,0 +1,28 @@
+form.form-auth
+  h1.form-auth__title Авторизуйтесь
+  .form-auth__row
+    label(for="auth-login").form-auth__input-title Логин
+      +icon("form-auth__icon", "login", 20)
+    input(type="text" name="auth-login" placeholder="Логин").input.form-auth__input#auth-login
+  .form-auth__row
+    label(for="auth-pass").form-auth__input-title Пароль
+      +icon("form-auth__icon", "pass", 20)
+    input(type="password" name="auth-pass" placeholder="Пароль").input.form-auth__input#auth-pass
+  .form-auth__row.form-auth__row--check
+    label.form-auth__row-checkbox
+      input(type="checkbox" name="auth-checkbox").checkbox.form-auth__checkbox#auth-check
+      span.checkbox__custom
+        +icon("checkbox__icon", "check", 14)
+      span.checkbox__label Я человек
+  .form-auth__row    
+    p.form-auth__quest Вы точно не робот?
+    .form-auth__captcha
+      label.form-auth__row-radio
+        input(type="radio" name="auth-radio").radio.form-auth__radio#auth-radio1
+        span.radio__custom
+        span.radio__label Да
+      label.form-auth__row-radio
+        input(type="radio" name="auth-radio").radio.form-auth__radio#auth-radio2
+        span.radio__custom
+        span.radio__label Не уверен
+

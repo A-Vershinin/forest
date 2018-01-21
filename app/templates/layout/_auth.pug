@@ -1,0 +1,18 @@
+section.auth
+  .auth__bg
+    picture
+      source(type="image/webp" srcset="img/bg/forest-desktop.webp 1x, img/bg/forest-desktop.webp 2x")
+      img(src="img/bg/forest-desktop.jpg" srcset="img/bg/forest-desktop.jpg 2x"
+      alt="wecolme background", class="auth__bg-img")
+  .auth__box
+    .auth__box-inner
+      .auth__info
+        .auth__form
+          include ../blocks/_form-auth
+      nav.auth__nav
+        a(href="").btn.auth__nav-link На главную
+        a(href="").btn.auth__nav-link Войти
+  .auth__copyright
+    .copyright
+      span.copyright__text &copy; Анатолий Вершинин
+      span.copyright__text 2017

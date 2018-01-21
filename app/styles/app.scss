@@ -17,17 +17,20 @@
 @import "blocks/_content.scss";
 @import "blocks/_wrapper.scss";
 @import "blocks/_btn.scss";
+@import "blocks/_form.scss";
 @import "blocks/_socials.scss";
-//@import "blocks/_contact-form.scss";
+//@import "blocks/_checkbox.scss";
 //@import "blocks/_logo.scss";
 //@import "blocks/_search.scss";
 //@import "blocks/_menu.scss";
 //@import "blocks/_scrollup.scss";
 @import "blocks/_user.scss";
 @import "blocks/_copyright.scss";
+@import "blocks/_form-auth.scss";
 
 
 // layout-секции //
 @import "./layout/_header.scss";
 @import "./layout/_footer.scss";
 @import "./layout/_welcome.scss";
+@import "./layout/_auth.scss";
