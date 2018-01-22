@@ -13,14 +13,20 @@ mixin icon(classNameIcon, name, size)
   span(aria-hidden="true", class=classNameIcon)
     svg(viewBox='0 0 ' + size + ' ' + size width=size height=size)
       use(xlink:href=sprite + "#" + prefix + name)
-      
+
 mixin svg-inline(name)
   svg.icon(class= name)
     use(xlink:href=`#${name}`)
 
 mixin icon-awesome(nameIcon)
   i&attributes(attributes)(class=`fa ${nameIcon.replace(/(\S+\b)/g, 'fa-$1')}` aria-hidden='true')
-  
+
+mixin svg-pic(classNameIcon, id, sizeW, sizeH)
+  - var sprite = "img/svg-image-sprite.svg"
+  span(aria-hidden="true", class=classNameIcon)
+    svg(viewBox='0 0 ' + sizeW + ' ' + sizeH)
+      use(xlink:href=sprite + "#" + id)
+      
 mixin img-one(className)
   picture
     source(type="image/webp"
@@ -29,7 +35,7 @@ mixin img-one(className)
     img(src="img/photo-1-mobile.jpg"
     srcset="img/photo-1-mobile@2x.jpg 2x"
     alt="Logotype", class="#{className}__img")
-    
+
 mixin img(className)
   picture
     source(type="image/webp" media="(min-width: 1200px)"

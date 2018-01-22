@@ -1,6 +1,12 @@
 header.header
   .header__top
-    .container.header__container
-      .header__logo Logo
-      .header__desc Yeoman-kit-project
-
+    .header__socials
+      include ../blocks/_socials
+    .header__arrow
+      a(href="#").arrow-down Стрелка вниз
+        +icon("arrow-down__icon", "arrow-down", 26)
+    .header__toggle
+      include ../blocks/_hamburger
+  .header__bottom
+    include ../blocks/_user
+  +svg-pic("header__bg-triangle", "triangle", 1000, 86)

@@ -11,19 +11,18 @@
   vertical-align: middle;
   font-size: 1rem;
   &:not(:last-child) {
-    margin-right: 28px;
+    margin-right: 2.8rem;
   }
 }
 .socials__link {
   display: block;
   height: 100%;
-  //width: 20px;
-  //height: 20px;
-  //text-decoration: none;
-  //cursor: pointer;
-  transition: 0.25s;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s ease;
   svg {
     fill: #ffffff;
+    transition:  0.2s ease;
   }
   &:hover {
     svg {
@@ -32,6 +31,7 @@
   }
   &:active {
     svg {
+      transform: scale(1.2);
       fill: $accent-active;
     }
   }

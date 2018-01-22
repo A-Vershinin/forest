@@ -14,19 +14,18 @@
 
 // BEM-блоки //
 // index.html
-@import "blocks/_content.scss";
+@import "layout/content";
 @import "blocks/_wrapper.scss";
 @import "blocks/_btn.scss";
 @import "blocks/_form.scss";
 @import "blocks/_socials.scss";
-//@import "blocks/_checkbox.scss";
-//@import "blocks/_logo.scss";
-//@import "blocks/_search.scss";
-//@import "blocks/_menu.scss";
+@import "blocks/_menu.scss";
 //@import "blocks/_scrollup.scss";
 @import "blocks/_user.scss";
 @import "blocks/_copyright.scss";
 @import "blocks/_form-auth.scss";
+@import "blocks/_arrow-down.scss";
+@import "blocks/_hamburger.scss";
 
 
 // layout-секции //

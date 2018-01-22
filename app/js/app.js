@@ -1,5 +1,6 @@
 import someModule from "./modules/someModule";
-// import isJsAndTouchSupported from "./modules/isJsAndTouchSupported";
+import isJsAndTouchSupported from "./modules/isJsAndTouchSupported";
+import menu from "./modules/menu";
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -7,10 +8,16 @@ document.addEventListener("DOMContentLoaded", function() {
     someModule("start js code");
 
     // check js
-    // isJsAndTouchSupported();
+    isJsAndTouchSupported();
 
-    // ckeck svg local
-    // svg4everybody();
+    // for SVG-elements in IE
+    svg4everybody();
+
+    // toggleMenu
+    menu();
+
+
+
 
 
 

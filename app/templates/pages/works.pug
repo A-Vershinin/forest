@@ -1,0 +1,25 @@
+extends ../basic/_template.pug
+
+block content
+  
+  .wrapper
+    //HEADER
+    .wrapper__menu.wrapper__menu--vertical
+      include ../blocks/_menu
+    |
+    |
+    include ../layout/_header
+    //END HEADER
+    |
+    |
+    //MAIN CONTENT
+    main.content.content--works
+      include ../layout/_works
+      |
+      |
+    //END CONTENT
+    |
+    |
+    //MAIN FOOTER
+    include ../layout/_footer
+    //END FOOTER

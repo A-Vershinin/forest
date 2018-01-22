@@ -4,7 +4,7 @@
   flex-flow: column nowrap;
   //height: 100%;
   height: 100vh;
-  overflow-x: hidden;
+  //overflow-x: hidden;
 }
 .wrapper > .header,
 .wrapper > .footer {
@@ -18,4 +18,26 @@
   flex-shrink: 0;
   flex-basis: auto;
   //flex: 1 0 auto;
+}
+
+.wrapper__menu {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background: rgba(108, 156, 90, 0.87);
+  z-index: 100;
+  transform: translateY(-100%);
+  transition: transform 1s ease;
+  &--show {
+    transform: translateY(0);
+  }
+}
+.wrapper__menu--vertical .menu__list {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
