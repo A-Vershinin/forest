@@ -1,9 +1,9 @@
 mixin list (className, items, activeItem)
-  nav(class=`#{className}`)
-    ul(class="#{className}__list")
+  nav(class=`${className}`)
+    ul(class=`${className}__list`)
       each nav, ndx in items
-        li(class="#{className}__item")
-          a(href="#" class="#{className}__link" + ((ndx == activeItem) ? "#{className}__link--active" : "" ))=nav
+        li(class=`${className}__item`)
+          a(href="#" class=`${className}__link` + ((ndx == activeItem) ? `${className}__link--active` : "" ))=nav
 
 mixin icon(classNameIcon, name, size)
   - var size = size || 20;
@@ -13,28 +13,35 @@ mixin icon(classNameIcon, name, size)
   span(aria-hidden="true", class=classNameIcon)
     svg(viewBox='0 0 ' + size + ' ' + size width=size height=size)
       use(xlink:href=sprite + "#" + prefix + name)
-
-mixin svg-inline(name)
-  svg.icon(class= name)
+      
+mixin svg-inline(name, svgBox)
+  svg(viewBox=`${svgBox}`)
     use(xlink:href=`#${name}`)
+    
+mixin svgIcon(svgID, svgClass, svgBox)
+  svg(class=`${svgClass}` viewBox=`${svgBox}`)
+    use(xlink:href=`assets/img/sprite.svg#${svgID}`)
 
 mixin icon-awesome(nameIcon)
-  i&attributes(attributes)(class=`fa ${nameIcon.replace(/(\S+\b)/g, 'fa-$1')}` aria-hidden='true')
+  i&attributes(class=`fa ${nameIcon.replace(/(\S+\b)/g, 'fa-$1')}` aria-hidden='true')
+
+mixin arrow(href, classNameLink)
+  a(href=`${href}`)(class=`${classNameLink}`)
+    +icon("arrow__icom", "arrow")
 
 mixin svg-pic(classNameIcon, id, sizeW, sizeH)
   - var sprite = "img/svg-image-sprite.svg"
-  span(aria-hidden="true", class=classNameIcon)
+  span(aria-hidden="true", class=`${classNameIcon}`)
     svg(viewBox='0 0 ' + sizeW + ' ' + sizeH)
       use(xlink:href=sprite + "#" + id)
       
-mixin img-one(className)
+mixin img-one(name, className)
   picture
     source(type="image/webp"
-    srcset="img/photo-1-mobile.webp 1x, img/photo-1-mobile@2x.webp 2x")
+    srcset=`img/conent/${name}.webp 1x, img/conent/${name}.webp 2x`)
     |
-    img(src="img/photo-1-mobile.jpg"
-    srcset="img/photo-1-mobile@2x.jpg 2x"
-    alt="Logotype", class="#{className}__img")
+    img(src=`img/conent/${name}.jpg` srcset=`img/conent/${name}.jpg 2x`
+    alt="Logotype", class=`${className}__img`)
 
 mixin img(className)
   picture

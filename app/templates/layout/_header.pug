@@ -1,3 +1,8 @@
+include ../blocks/_user
+  
+block variables
+  - var userMain = "user--main"
+    
 header.header
   .header__top
     .header__socials
@@ -8,5 +13,5 @@ header.header
     .header__toggle
       include ../blocks/_hamburger
   .header__bottom
-    include ../blocks/_user
+    +user(userMain)
   +svg-pic("header__bg-triangle", "triangle", 1000, 86)

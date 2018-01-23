@@ -6,6 +6,20 @@
   color: #ffffff;
   text-align: center;
 }
+.user--main {
+  .user__avatar {
+    width: 18rem;
+    height: 18rem;
+  }
+  .user__name {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+  .user__desc {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
 .user__avatar {
   width: 14rem;
   height: 14rem;
@@ -20,15 +34,13 @@
 .user__name {
   margin-bottom: 1rem;
   font-size: 2.8rem;
-  font-weight: 500;
   line-height: 3.4rem;
+  font-weight: 500;
   color: white;
 }
 .user__desc {
-  font-family: $font-base;
   font-size: 1.6rem;
   line-height: 2.4rem;
-  font-weight: 400;
   color: rgba(255, 255, 255, 0.8);
 }
 .user__avatar-img {}

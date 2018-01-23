@@ -32,12 +32,7 @@ $black-1: #000000;
 $bg-1: #ffffff;
 $bg-2: #6a7079;
 
-//$bg-image-1: linear-gradient(
-//	to right,
-//	rgba(0, 0, 0, 0.2) 0%,
-//	rgba(0, 0, 0, 0.2) 1%,
-//	transparent 100%
-//);
+$header-shadow: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.35) 100%);
 
 //shadows, borders, rgba, other
 $border-1: rgba(230, 235, 235, 0.5);

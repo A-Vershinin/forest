@@ -1,3 +1,5 @@
+include ../blocks/_user
+  
 section.welcome
   .welcome__bg
     picture
@@ -8,12 +10,12 @@ section.welcome
     .welcome__box-inner
       .welcome__info
         .welcome__user
-          include ../blocks/_user
+          +user()
         .welcome__socials      
           include ../blocks/_socials
       nav.welcome__nav
-        a(href="").btn.welcome__nav-link Мои работы
-        a(href="").btn.welcome__nav-link Обо мне
+        a(href="#").btn.welcome__nav-link Мои работы
+        a(href="#").btn.welcome__nav-link Обо мне
   .welcome__copyright
     include ../blocks/_copyright
     

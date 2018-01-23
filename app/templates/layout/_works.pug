@@ -1,1 +1,110 @@
-h2 Слайдер
+section.works
+  ul.works__filter#filter
+    li.works__filter-item.works__filter-item--active
+      a(href="#" data-filter="*").works__filter-link Все
+    li.works__filter-item
+      a(href="#" data-filter=".landing").works__filter-link Landing Page
+    li.works__filter-item
+      a(href="#" data-filter=".shops").works__filter-link Интернет Магазин
+    li.works__filter-item
+      a(href="#" data-filter=".corporative").works__filter-link Корпоративные
+    li.works__filter-item
+      a(href="#" data-filter=".spa").works__filter-link SPA
+    li.works__filter-item
+      a(href="#" data-filter=".other").works__filter-link Другие  
+  .works__gallery#works
+    .works__sizer
+    aticle.works__gallery-item.landing
+      .works__gallery-pict
+        picture
+          source(type="image/webp"
+          srcset="img/content/work-1@1x.webp 1x, img/content/work-1@2x.webp 2x")
+          img(src="img/content/work-1@1x.jpg" srcset="img/content/work-1@2x.jpg 2x"
+            width="520" height="650"
+          alt="Logotype").works__gallery-img
+      .works__gallery-cover
+        h3.works__gallery-title Какое-то длинное название
+        a(href="#").btn.works__btn.works__btn--cover
+          +icon("works__btn-cover-link", "link", 14)
+          | Посмотреть сайт
+    aticle.works__gallery-item.shops
+      .works__gallery-pict
+        picture
+          source(type="image/webp"
+          srcset="img/content/work-2@1x.webp 1x, img/content/work-2@2x.webp 2x")
+          img(src="img/content/work-2@1x.jpg" srcset="img/content/work-2@2x.jpg 2x"
+          width="520" height="650"
+          alt="Logotype").works__gallery-img
+      .works__gallery-cover 
+        h3.works__gallery-title Какое-то название
+        a(href="#").btn.works__btn.works__btn--cover 
+          +icon("works__btn-cover-link", "link", 14)
+          |Посмотреть сайт
+    aticle.works__gallery-item.shops
+      .works__gallery-pict
+        picture
+          source(type="image/webp"
+          srcset="img/content/work-3@1x.webp 1x, img/content/work-3@2x.webp 2x")
+          img(src="img/content/work-3@1x.jpg" srcset="img/content/work-3@2x.jpg 2x"
+          width="520" height="650"
+          alt="Logotype").works__gallery-img
+      .works__gallery-cover
+        h3.works__gallery-title Какое-то длинное название в две три строки
+        a(href="#").btn.works__btn.works__btn--cover
+          +icon("works__btn-cover-link", "link", 14)
+          | Посмотреть сайт
+    aticle.works__gallery-item.corporative
+      .works__gallery-pict
+        picture
+          source(type="image/webp"
+          srcset="img/content/work-3@1x.webp 1x, img/content/work-3@2x.webp 2x")
+          img(src="img/content/work-3@1x.jpg" srcset="img/content/work-3@2x.jpg 2x"
+          width="520" height="650"
+          alt="Logotype").works__gallery-img
+      .works__gallery-cover
+        h3.works__gallery-title Какое-то название
+        a(href="#").btn.works__btn.works__btn--cover
+          +icon("works__btn-cover-link", "link", 14)
+          | Посмотреть сайт
+    aticle.works__gallery-item.spa
+      .works__gallery-pict
+        picture
+          source(type="image/webp"
+          srcset="img/content/work-3@1x.webp 1x, img/content/work-3@2x.webp 2x")
+          img(src="img/content/work-3@1x.jpg" srcset="img/content/work-3@2x.jpg 2x"
+          width="520" height="650"
+          alt="Logotype").works__gallery-img
+      .works__gallery-cover
+        h3.works__gallery-title Какое-то название
+        a(href="#").btn.works__btn.works__btn--cover
+          +icon("works__btn-cover-link", "link", 14)
+          | Посмотреть сайт
+    aticle.works__gallery-item.other
+      .works__gallery-pict
+        picture
+          source(type="image/webp"
+          srcset="img/content/work-3@1x.webp 1x, img/content/work-3@2x.webp 2x")
+          img(src="img/content/work-3@1x.jpg" srcset="img/content/work-3@2x.jpg 2x"
+          width="520" height="650"
+          alt="Logotype").works__gallery-img
+      .works__gallery-cover
+        h3.works__gallery-title Какое-то название
+        a(href="#").btn.works__btn.works__btn--cover
+          +icon("works__btn-cover-link", "link", 14)
+          | Посмотреть сайт
+    aticle.works__gallery-item.other
+      .works__gallery-pict
+        picture
+          source(type="image/webp"
+          srcset="img/content/work-3@1x.webp 1x, img/content/work-3@2x.webp 2x")
+          img(src="img/content/work-3@1x.jpg" srcset="img/content/work-3@2x.jpg 2x"
+          width="520" height="650"
+          alt="Logotype").works__gallery-img
+      .works__gallery-cover
+        h3.works__gallery-title Какое-то длинное название в две три строки
+        a(href="#").btn.works__btn.works__btn--cover
+          +icon("works__btn-cover-link", "link", 14)
+          | Посмотреть сайт    
+  button.btn.works__btn 
+    +icon("works__btn-icon", "more", "16")
+    |Показать ещё
