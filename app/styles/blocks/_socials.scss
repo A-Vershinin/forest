@@ -22,7 +22,7 @@
   transition: 0.2s ease;
   svg {
     fill: #ffffff;
-    transition:  0.2s ease;
+    transition: 0.2s ease;
   }
   &:hover {
     svg {
@@ -39,4 +39,20 @@
 .socials__icon {
   display: inline-block;
   font-size: 0;
+}
+.socials--footer {
+  justify-content: flex-start;
+  & .socials__item {
+    &:first-child {
+      margin-left: 2rem;
+    }
+  }
+  & .socials__link {
+    svg {
+      fill: rgba(255, 255, 255, 0.5);
+    }
+    &:hover svg {
+      fill: rgba(255, 255, 255, 1);
+    }
+  }
 }

@@ -1,4 +1,5 @@
 include ../blocks/_user
+include ../blocks/_socials
   
 block variables
   - var userMain = "user--main"
@@ -6,10 +7,10 @@ block variables
 header.header
   .header__top
     .header__socials
-      include ../blocks/_socials
+      +socials()
     .header__arrow
       a(href="#").arrow-down Стрелка вниз
-        +icon("arrow-down__icon", "arrow-down", 26)
+        +icon("arrow__icon", "arrow-down", 26)
     .header__toggle
       include ../blocks/_hamburger
   .header__bottom

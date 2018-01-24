@@ -1,12 +1,12 @@
 extends ../basic/_template
-
+include ../blocks/_menu
 
 block content
   
   .wrapper
     //HEADER
     .wrapper__menu.wrapper__menu--vertical
-      include ../blocks/_menu
+      +menu()
     |
     |
     include ../layout/_header

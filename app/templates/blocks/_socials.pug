@@ -1,11 +1,14 @@
-ul.socials
-  li.socials__item
-    a.socials__link(href="javascript:void(0);", target="_blank", rel="noopener noreferrer")
-      +icon("socials__icon", "vk", 25)
-  li.socials__item
-    a.socials__link(href="javascript:void(0);", target="_blank", rel="noopener noreferrer")
-      +icon("socials__icon", "github", 25)
-  li.socials__item
-    a.socials__link(href="javascript:void(0);", target="_blank", rel="noopener noreferrer")
-      svg(width="22", height="23")
-        use(xlink:href="img/svg-icon-sprite.svg#icon-in")
+mixin socials(modificator)
+  - var modificator = modificator || "";
+    
+  ul(class=`socials ${modificator}`)
+    li.socials__item
+      a.socials__link(href="javascript:void(0);", target="_blank", rel="noopener noreferrer")
+        +icon("socials__icon", "vk", 25)
+    li.socials__item
+      a.socials__link(href="javascript:void(0);", target="_blank", rel="noopener noreferrer")
+        +icon("socials__icon", "github", 25)
+    li.socials__item
+      a.socials__link(href="javascript:void(0);", target="_blank", rel="noopener noreferrer")
+        svg(width="22", height="23")
+          use(xlink:href="img/svg-icon-sprite.svg#icon-in")

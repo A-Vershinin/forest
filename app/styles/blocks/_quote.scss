@@ -1,0 +1,34 @@
+
+.quote {
+  font-family: $font-base;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+
+.quote__text {
+  margin-bottom: 1rem;
+  font-weight: 300;
+  font-style: italic;
+  color: inherit;
+}
+
+.quote__author {
+  position: relative;
+  padding-left: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: inherit;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 50;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    display: block;
+    width: 1.2rem;
+    height: 0.3rem;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}

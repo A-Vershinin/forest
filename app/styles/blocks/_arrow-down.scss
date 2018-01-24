@@ -4,12 +4,12 @@
   font-size: 0;
   cursor: pointer;
   &:hover {
-    .arrow-down__icon {
+    .arrow__icon {
       fill: rgba(#ffffff, 1);
     }
   }
 }
-.arrow-down__icon {
+.arrow__icon {
   display: block;
   fill: rgba(#ffffff, 0.7);
   transition: 0.2s ease;
