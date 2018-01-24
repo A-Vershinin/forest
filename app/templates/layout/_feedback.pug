@@ -1,1 +1,19 @@
-section.feedback Отзывы
+section.feedback
+  .feedback-form
+    form.form#feedback-form
+      .form__content
+        h2.form__title Связаться со мной
+        .form__row
+          label
+            input(type='text', name="name" placeholder='Имя'
+            value="" tabindex="1" required).input.form__input#name-field
+        .form__row
+          label
+            input(type='email', name="email" placeholder='Email'
+            value="" tabindex="2" required).input.form__input#email-field
+        .form__row
+          textarea(name="message" placeholder='Ваше сообщение'
+          tabindex="3").textarea.form__texarea#textarea-field
+      .form__bottom
+        a(href="#" tabindex="4").btn.form__btn Отправить
+        a(href="#" tabindex="5").btn.form__btn Очистить

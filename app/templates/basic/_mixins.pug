@@ -26,7 +26,7 @@ mixin icon-awesome(nameIcon)
   i&attributes(class=`fa ${nameIcon.replace(/(\S+\b)/g, 'fa-$1')}` aria-hidden='true')
 
 mixin arrow(href, classNameLink)
-  a(href=`${href}`)(class=`${classNameLink}`)
+  a(href=`${href}` class=`${classNameLink}`)
     +icon("arrow__icom", "arrow")
 
 mixin svg-pic(classNameIcon, id, sizeW, sizeH)
