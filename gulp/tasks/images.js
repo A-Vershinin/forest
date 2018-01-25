@@ -20,13 +20,19 @@ module.exports = function() {
     return $.gulp.src('./app/img/svg-pictures/*.*', { since: $.gulp.lastRun('imagesSVG') })
       .pipe($.gp.if(!$.dev, $.gp.svgmin({
         js2svg: {
+          run: function ($) {
+            $('[fill]').removeAttr('fill');
+            $('[stroke]').removeAttr('stroke');
+            $('[style]').removeAttr('style');
+            $('defs').remove();
+          },
           pretty: true
         }
       })))
       .pipe($.gp.cheerio({
         parserOptions: { xmlMode: true }
       }))
-      .pipe($.gp.replace('&gt;', '>'))
+      // .pipe($.gp.replace('&gt;', '>'))
       .pipe($.gp.svgSprite({
         mode: {
           symbol: {

@@ -1,11 +1,10 @@
- 
-mixin user(userModificator)
-  - var userModificator = userModificator || "";
+mixin user(modificator)
+  - var modificator = modificator || "";
     
-  div(class=`user ${userModificator}`)
+  div(class=`user ${modificator}`)
     .user__avatar
       picture
-        source(type="image/webp" srcset="img/content/avatar.jpg 1x, img/content/avatar.jpg 2x")
+        source(type="image/webp" srcset="img/content/avatar.webp 1x, img/content/avatar.webp 2x")
         img(src="img/content/avatar.jpg" srcset="img/content/avatar.jpg 2x"
         alt="welcome background", class="user__avatar-img")
     h1.user__name Владимир Астахов    

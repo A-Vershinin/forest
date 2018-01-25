@@ -26,8 +26,12 @@
 @import "blocks/_form-auth.scss";
 @import "blocks/_arrow-down.scss";
 @import "blocks/_hamburger.scss";
-@import "blocks/_page-title.scss";
+@import "blocks/_page.scss";
+@import "blocks/_traingle.scss";
 @import "blocks/_quote.scss";
+@import "blocks/_popup.scss";
+@import "blocks/_skills.scss";
+@import "blocks/_circles.scss";
 
 
 // layout-секции //
@@ -37,3 +41,5 @@
 @import "./layout/_auth.scss";
 @import "./layout/_works.scss";
 @import "./layout/_feedback.scss";
+@import "./layout/_about.scss";
+@import "./layout/_contacs.scss";

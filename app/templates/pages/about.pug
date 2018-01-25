@@ -1,0 +1,50 @@
+extends ../basic/_template
+include ../blocks/_menu
+include ../blocks/_socials
+include ../blocks/_user
+include ../blocks/_traingle
+  
+block content
+
+  .wrapper.wrapper--about
+    //HEADER
+    .wrapper__menu.wrapper__menu--vertical
+      +menu()
+    |
+    |
+    //include ../layout/_header
+    header.header
+      .header__top
+        .header__socials
+          +socials()
+        .header__arrow
+          a(href="#").arrow-down Стрелка вниз
+            +icon("arrow__icon", "arrow-down", 26)
+        .header__toggle
+          include ../blocks/_hamburger
+      .header__bottom
+        +user("user--main")
+      .header__bg-triangle
+        +traingle("traingle--about")
+    //END HEADER
+    |
+    |
+    //MAIN CONTENT
+    main.content.content--about
+      |
+      |
+      include ../layout/_about
+      |
+      |
+      include ../layout/_contacts
+    |
+    |
+    //END CONTENT
+    |
+    |
+    //MAIN FOOTER
+    include ../layout/_footer
+    //END FOOTER
+    |
+    |
+    include ../blocks/_popup

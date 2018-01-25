@@ -20,6 +20,21 @@
     line-height: 3rem;
   }
 }
+.user--full {
+  .user__name,
+  .user__desc {
+    display: none;
+  }
+  .user__avatar {
+    width: auto;
+    height: auto;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  .user__avatar-img {
+    width: 44rem;
+  }
+}
 .user__avatar {
   width: 14rem;
   height: 14rem;
@@ -43,4 +58,3 @@
   line-height: 2.4rem;
   color: rgba(255, 255, 255, 0.8);
 }
-.user__avatar-img {}

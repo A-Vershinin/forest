@@ -1,0 +1,39 @@
+.skills {
+}
+.skills__list {
+  @extend %ul-reset;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-top: -1rem;
+  justify-content: flex-start;
+}
+.skills__group-name {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  font-size: 2.8rem;
+  line-height: 3rem;
+  color: #566358;
+}
+.skills__item {
+  position: relative;
+  width: 12rem;
+  height: 12rem;
+  margin: 1rem;
+}
+.skills__name {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 1.4375rem;
+  font-family: $font-base;
+  font-size: 1.3rem;
+  color: #4e8839;
+  text-align: center;
+}
+.skill__circles {
+  display: block;
+}

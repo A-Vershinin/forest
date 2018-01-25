@@ -3,12 +3,11 @@ function works () {
   const grid = document.getElementById('works');
   const gridItem = ".works__gallery-item";
   const filter = document.getElementById('filter');
-  const filterItem = filter.children;
   const filterActive = "works__filter-item--active";
   let iso;
 
   function createGrid() {
-    if (!grid) return;
+    if (!grid && !filter) return;
 
     imagesLoaded(grid, function() {
       iso = new Isotope(grid, {
@@ -40,6 +39,7 @@ function works () {
     filter.addEventListener("click", evt => {
       evt.preventDefault();
       const filterParent = evt.target.parentNode;
+      const filterItem = filter.children;
       let sortValue = evt.target.getAttribute('data-filter');
       iso.arrange({ filter: sortValue });
       toggleClass(filterParent, filterItem, filterActive);

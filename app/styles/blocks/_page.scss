@@ -1,6 +1,9 @@
+.page {
+
+}
 .page-title {
   position: relative;
-  padding-top: 50px;
+  padding-top: 5rem;
   padding-bottom: 3.5rem;
   margin-bottom: 3.5rem;
   font-size: 6.3rem;
@@ -24,5 +27,32 @@
     width: 9rem;
     height: 0.3rem;
     background-color: #373e42;
+  }
+}
+.page-title--about {
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+  margin-top: -1.5rem;
+  background-image: url("../../img/decor/about-header@1x.png");
+}
+.page-subtitle {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  padding-top: 3.5rem;
+  font-size: 3.5rem;
+  line-height: 4rem;
+  color: #566358;
+  background-image: none;
+  &::after {
+    background-color: #566358;
+  }
+}
+.page-text {
+  text-align: left;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #566358;
+  &:not(:last-child) {
+    margin-bottom: 2rem;
   }
 }

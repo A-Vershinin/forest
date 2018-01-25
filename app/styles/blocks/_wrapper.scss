@@ -4,7 +4,7 @@
   flex-flow: column nowrap;
   //height: 100%;
   //height: 100vh;
-  //overflow-x: hidden;
+  overflow-x: hidden;
   &--index {
     height: 100vh;
   }
@@ -25,7 +25,6 @@
   flex-basis: auto;
   //flex: 1 0 auto;
 }
-
 .wrapper__menu {
   position: fixed;
   display: flex;

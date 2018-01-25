@@ -1,0 +1,13 @@
+.traingle {
+  fill: #f8f9f5;
+  &--about {
+    & .traingle__about-left {
+      fill: #ebefe2;
+    }
+    & .traingle__about-right {
+      fill: #f4f5f0;
+    }
+  }
+}
+
+
