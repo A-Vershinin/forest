@@ -1,0 +1,19 @@
+section.adress
+  .adress__map Карта
+  .adress__block
+    .contacts
+      .contacts__title
+        h3.page-title.page-subtitle Контакты
+      .contacts__list
+        a(href="skype:skype-login?chat").contacts__link
+          +icon("contacts__icon", "skype", "22")
+          span.contacts__text skype-login
+        a(href="mailto:user@gmail.com").contacts__link
+          +icon("contacts__icon", "envelope", "22")
+          span.contacts__text user@gmail.com
+        a(href="tel:+380999999999").contacts__link
+          +icon("contacts__icon", "phone", "22")
+          span.contacts__text +38 099 999 99 99
+        a.contacts__link
+          +icon("contacts__icon", "map-marker", "22")
+          span.contacts__text Харьков
