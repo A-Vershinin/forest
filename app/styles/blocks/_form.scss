@@ -132,6 +132,11 @@
 // ----------------------------------------------
 // contact-form
 .form {
+  width: 38rem;
+  margin: 0 auto;
+  background-color: rgba(235, 239, 226, 0.6);
+  border-radius: 0.5rem;
+  overflow: hidden;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;

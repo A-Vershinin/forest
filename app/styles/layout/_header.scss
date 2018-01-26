@@ -5,8 +5,13 @@
   justify-content: flex-start;
   height: 100vh;
   color: $light-1;
-  background-color: #80974e;
-  background-image: url("../../img/bg/forest-desktop.png");
+  //background-color: #80974e;
+  background-image: url("../../img/bg/forest-desctop@1x.jpg");
+  background-image: url("../../img/bg/forest-desctop@1x.webp");
+  @include retina {
+    background-image: url("../../img/bg/forest-desctop@2x.jpg");
+    background-image: url("../../img/bg/forest-desctop@2x.webp");
+  }
   @extend %cover;
   &::after {
     content: "";
@@ -39,7 +44,7 @@
 }
 .header__toggle {
   position: sticky;
-  z-index: 200;
+  z-index: 300;
   display: inline-block;
   vertical-align: middle;
 }
@@ -57,15 +62,25 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 34rem;
 }
 
-//@include laptop {
-//  .header {
-//    background-color: black;
-//  }
-//}
-//@include tablets {
-//  .header {
-//    background-color: violet;
-//  }
-//}
+@include laptop {
+
+}
+@include tablets-df {
+  .header {
+    background-image: url("../../img/bg/forest-tablet@1x.jpg");
+    @include retina {
+      background-image: url("../../img/bg/forest-tablet@2x.jpg");
+    }
+  }
+}
+@include phones-df {
+  .header {
+    background-image: url("../../img/bg/forest-phone@1x.jpg");
+    @include retina {
+      background-image: url("../../img/bg/forest-phone@2x.jpg");
+    }
+  }
+}

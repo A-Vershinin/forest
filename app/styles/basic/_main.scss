@@ -19,7 +19,7 @@ body {
   -webkit-tap-highlight-color: transparent; //устанавливает цвет подсветки ссылкам или любого кликабельного эл-та
 }
 html {
-  //@include font-size-base();
+  @include font-size-base();
 }
 input,
 textarea {

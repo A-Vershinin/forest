@@ -1,21 +1,29 @@
 .feedback {
   position: relative;
   height: 100vh;
-  padding-top: 10rem;
+  //padding-top: 10rem;
   text-align: center;
   background-color: #dde3df;
-  background-image: url("../../img/bg/forest-bottom.png");
-  background-image: url("../../img/bg/forest-bottom.webp");
+  background-image: url("../../img/bg/forest-bottom@1x.png");
+  background-image: url("../../img/bg/forest-bottom@1x.webp");
   @extend %cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  @include retina {
+    background-image: url("../../img/bg/forest-bottom@2x.png");
+    background-image: url("../../img/bg/forest-bottom@2x.webp");
+  }
+}
+.feedback__inner {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .feedback-form {
-  position: absolute;
-  z-index: 50;
-  left: 50%;
-  top: 35%;
-  transform: translate(-50%, -50%);
-  width: 38rem;
-  margin: 0 auto;
+  margin-bottom: 4rem;
   background-color: rgba(235, 239, 226, 0.6);
   border-radius: 0.5rem;
   overflow: hidden;
@@ -23,9 +31,8 @@
 .feedback__arrow {
   position: absolute;
   z-index: 50;
-  left: 50%;
-  bottom: 22%;
-  transform: rotate(180deg) translateX(-50%);
+  bottom: 4%;
+  transform: rotate(180deg);
   display: inline-block;
   vertical-align: top;
 }

@@ -17,7 +17,7 @@
 .menu__link {
   position: relative;
   display: block;
-  padding: 4rem 2rem;
+  padding: 4vh 2rem;
   font-size: 6.3rem;
   line-height: 6.5rem;
   font-weight: 400;
@@ -74,7 +74,7 @@
 
   }
   & .menu__link {
-    padding: 1.5rem 0;
+    padding: 1.5vh 0;
     font-size: 1.6rem;
     line-height: 2rem;
     font-family: $font-base;
@@ -99,6 +99,21 @@
       &::after {
         background-color: rgba(255, 255, 255, 0.5);
       }
+    }
+  }
+}
+@include tablets-df {
+  .menu--footer {
+
+    //.menu__link {
+    //  padding: 1.5rem 0;
+    //}
+  }
+}
+@include phones-df {
+  .menu--footer {
+    .menu__item {
+      margin: 0 1rem;
     }
   }
 }

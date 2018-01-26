@@ -33,7 +33,7 @@
   width: 100vw;
   min-height: 100vh;
   background: rgba(108, 156, 90, 0.87);
-  z-index: 100;
+  z-index: 250;
   transform: translateY(-100%);
   transition: transform 1s ease;
   &--show {
@@ -46,3 +46,4 @@
   justify-content: space-between;
   align-items: center;
 }
+

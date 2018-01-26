@@ -3,6 +3,7 @@
 }
 .page-title {
   position: relative;
+  z-index: 50;
   padding-top: 5rem;
   padding-bottom: 3.5rem;
   margin-bottom: 3.5rem;
@@ -13,9 +14,10 @@
   text-transform: uppercase;
   text-align: center;
   color: #373e42;
-  background-image: url("../../img/decor/works-header@1x.png");
+  background-image: url("../../img/bg/works-header.svg");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
+  background-size: contain;
   &::after {
     content: "";
     position: absolute;
@@ -33,7 +35,19 @@
   padding-bottom: 3rem;
   margin-bottom: 3rem;
   margin-top: -1.5rem;
-  background-image: url("../../img/decor/about-header@1x.png");
+  background-image: url("../../img/bg/about-header.svg");
+}
+.page-title__img {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  width: 50rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  svg {
+    fill: #e2ebd0;
+  }
 }
 .page-subtitle {
   padding-left: 3.5rem;

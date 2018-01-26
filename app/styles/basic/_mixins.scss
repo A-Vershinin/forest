@@ -120,39 +120,45 @@
   @return ($px/$font-size-base) * 1rem;
 }
 
-
-//пример ретины
+//брейкпоинт ретины
 @media #{$retina} {
   .selector {
   }
 }
+// миксин ретины
+@mixin retina {
+  @media #{$retina} {
+    @content;
+  }
+}
 
 //responsive mixins for desktop content
-@mixin desktop-big {
+@mixin desktop-big-df {
   @media screen and #{($lg-point-df)} {
     @content;
   }
 }
-@mixin desktop {
+@mixin desktop-df {
   @media screen and #{($lg-point-df)} {
     @content;
   }
 }
-@mixin laptop {
+@mixin laptop-df {
   @media screen and #{($md-point-df)} {
     @content;
   }
 }
-@mixin tablets {
+@mixin tablets-df {
   @media screen and #{($sm-point-df)} {
     @content;
   }
 }
-@mixin phones {
+@mixin phones-df {
   @media screen and #{($xs-point-df)} {
     @content;
   }
 }
+//responsive for landscape & portrait
 @mixin landscape {
   @media screen and (orientation: landscape) {
     @content;
@@ -163,25 +169,48 @@
     @content;
   }
 }
+//responsive mixins for mobile-first content
+@mixin desktop-full {
+  @media screen and #{($xxlg-point-mf)} {
+    @content;
+  }
+}
+@mixin desktop-xl {
+  @media screen and #{($xlg-point-mf)} {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and #{($lg-point-mf)} {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and #{($md-point-mf)} {
+    @content;
+  }
+}
+@mixin tablets {
+  @media screen and #{($sm-point-mf)} {
+    @content;
+  }
+}
 
 //responsive font-size for rem
 @mixin font-size-base {
   font-size: $font-size-phone;
-  @media screen and #{($xs-point-mf)} {
+  @media screen and #{($sm-point-mf)} {
     font-size: $font-size-tablet;
   }
-  @media screen and #{($sm-point-mf)} {
+  @media screen and #{($md-point-mf)} {
     font-size: $font-size-laptop;
   }
-  @media screen and #{($md-point-mf)} {
+  @media screen and #{($lg-point-mf)} {
     font-size: $font-size-desktop;
   }
-  @media screen and #{($lg-point-mf)} {
+  @media screen and #{($xlg-point-mf)} {
     font-size: $font-size-xl;
   }
-  //@media screen and #{($xlg-point-mf)} {
-  //  font-size: $font-size-xlx;
-  //}
 }
 //контейнер desktop фикс px
 %container-desktop-fix {

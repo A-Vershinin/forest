@@ -2,7 +2,7 @@
 
 module.exports = function() {
   $.gulp.task('images', function() {
-    return $.gulp.src('./app/img/**/*.{png,jpg,gif}', { since: $.gulp.lastRun('images') })
+    return $.gulp.src('./app/img/**/*.{png,jpg,gif,svg}', { since: $.gulp.lastRun('images') })
       .pipe($.gp.if(!$.dev,  $.gp.imagemin({
         optimizationLevel: 3,
         progressive: true,

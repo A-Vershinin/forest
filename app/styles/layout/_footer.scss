@@ -1,9 +1,7 @@
 .footer {
-  position: absolute;
-  z-index: 100;
-  bottom: 0;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 .footer__col {
   display: flex;
@@ -22,7 +20,8 @@
   margin-bottom: 1.2rem;
 }
 .footer__socials {
-
+  display: flex;
+  align-items: center
 }
 .footer__quote {
 
@@ -40,5 +39,34 @@
   }
   .copyright__text {
     font-weight: 300;
+  }
+}
+@include tablets-df {
+  .footer {
+    display: block;
+  }
+  .footer__col-left {
+    flex-direction: row;
+  }
+  .footer__menu {
+    margin-bottom: 0;
+  }
+}
+@include phones-df {
+  .footer__col {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .footer__menu {
+    text-align: center;
+  }
+  .footer__col-left {
+    display: block;
+  }
+  .footer__menu {
+    margin-bottom: 1rem;
+  }
+  .footer__socials {
+    justify-content: center;
   }
 }

@@ -21,6 +21,7 @@
   }
 }
 .user--full {
+  align-items: stretch;
   .user__name,
   .user__desc {
     display: none;
@@ -28,7 +29,7 @@
   .user__avatar {
     width: auto;
     height: auto;
-    margin-bottom: 0;
+    margin: 0 auto;
     border-radius: 0;
   }
   .user__avatar-img {
@@ -48,6 +49,7 @@
 }
 .user__name {
   margin-bottom: 1rem;
+  padding: 0 1rem;
   font-size: 2.8rem;
   line-height: 3.4rem;
   font-weight: 500;

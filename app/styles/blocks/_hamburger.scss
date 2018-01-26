@@ -21,6 +21,9 @@
 .hamburger-inner {
   width: 4rem;
   margin-top: -0.2rem;
+  &::after, &::before {
+    width: 4rem;
+  }
 }
 .hamburger-inner::before {
   top: -1.5rem;

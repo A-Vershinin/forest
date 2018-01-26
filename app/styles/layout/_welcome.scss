@@ -21,7 +21,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotateY(0deg);
-  width: 380px;
+  width: 38rem;
 }
 .welcome__box-inner {
   display: flex;
@@ -65,4 +65,6 @@
   bottom: 5rem;
   left: 50%;
   transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
 }
