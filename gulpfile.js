@@ -21,13 +21,13 @@ global.$ = {
   buffer : require("vinyl-buffer"),
   babel : require("babelify"),
   fs : require("fs"),
+  sortCss: require("sort-css-media-queries"),
   postReporter: require("postcss-reporter"),
   mqpacker: require("css-mqpacker"),
   browserSync: require("browser-sync").create(),
   gp: require("gulp-load-plugins")({
     rename: {
-      "gulp-html-minifier": "htmlmin",
-      "gulp-css-unit": "cssunit"
+      "gulp-html-minifier": "htmlmin"
     }
   })
 };
@@ -49,7 +49,6 @@ $.gulp.task("dev", $.gulp.series(
     "fonts",
     // "fonts:bundle",
     "favicons"
-    // "php"
     // 'styles:lint'
     // 'js:lint'
   ),

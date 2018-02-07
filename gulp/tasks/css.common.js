@@ -24,10 +24,6 @@ module.exports = function() {
         noCache: true,
         outputStyle: 'expanded'
       }))
-      // .pipe($.gp.cssunit({
-      //   type :'px-to-rem',
-      // 	rootSize : 16
-      // }))
       .pipe($.gp.if(!$.dev, $.gp.autoprefixer({
         browsers: $.config.autoprefixerConfig,
         cascade: true
@@ -35,7 +31,7 @@ module.exports = function() {
       .pipe($.gp.csscomb($.config.cssCombConfig))
       .pipe($.gp.postcss([
         $.mqpacker({
-          sort: true
+          sort: $.sortCss.desktopFirst
         })
       ]))
       .pipe($.gp.concat("app.css"))

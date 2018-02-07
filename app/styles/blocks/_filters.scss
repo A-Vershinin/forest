@@ -1,0 +1,117 @@
+.filters {
+  @extend %ul-reset;
+}
+.filters__icon {
+  content: "";
+  position: absolute;
+  z-index: 60;
+  right: 1rem;
+  top: 2rem;
+  line-height: 0;
+  transition: all 0.3s;
+  pointer-events: none;
+  display: none;
+  svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: $accent;
+  }
+}
+.filters__item {
+  display: inline-block;
+  &:hover {
+    .filters__link {
+      color: $accent;
+    }
+  }
+}
+.filters__item.placeholder {
+  display: none;
+}
+.is-open .filters__icon {
+  transform: rotate(-180deg);
+}
+.is-open .filters {
+  background-color: #f4f5ef;
+  box-shadow: inset 0 -0.2rem 0 $accent, 0 0.2rem 1rem rgba(0, 0, 0, 0.2);
+}
+.is-open .filters__item {
+  display: inline-block;
+}
+.is-open .placeholder .filters__link {
+  opacity: 0.4;
+}
+.filters__link {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: $font-base;
+  font-size: 1.5rem;
+  line-height: 5rem;
+  text-align: left;
+  text-decoration: none;
+  color: #9a9a9a;
+  transition: 0.2s ease;
+  cursor: pointer;
+  box-sizing: border-box;
+  &:hover {
+    color: $accent;
+  }
+  &:active {
+    color: $accent-active;
+  }
+}
+.no-touch .filters__link:hover {
+  color: $accent;
+}
+.filters__link.selected {
+  background-color: transparent;
+  color: $accent;
+  box-shadow: inset 0 -0.2rem 0 $accent;
+}
+@include tablets-df {
+  .filters {
+    position: absolute;
+    z-index: 60;
+    top: 0;
+    left: 0;
+    //background-color: darken(#f8f9f5, 2%);
+    box-shadow: inset 0 -0.2rem 0 $accent;
+  }
+  .filters__icon {
+    display: inline-block;
+  }
+  .is-open .filters__item {
+    display: block;
+  }
+  .filters__item {
+    display: none;
+  }
+  .filters__item:first-child {
+    display: block;
+  }
+  .filters__item.placeholder .filters__link {
+    color: $accent;
+  }
+  .filters__item .filters__link.selected {
+    color: #ffffff;
+  }
+  .filters__link {
+    display: block;
+    width: 25rem;
+    padding-left: 2rem;
+    padding-right: 3rem;
+    font-size: 1.7rem;
+    line-height: 6rem;
+  }
+  .filters__link.selected {
+    color: #ffffff;
+    background-color: $accent;
+  }
+}
+@include phones-df {
+
+}
+

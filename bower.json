@@ -14,6 +14,7 @@
     "picturefill": "^3.0.2",
     "css-hamburgers": "^0.8.1",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.2.0"
+    "jquery": "^3.2.0",
+    "mixitup": "^2"
   }
 }

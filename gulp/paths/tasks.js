@@ -16,6 +16,5 @@ module.exports = [
   './gulp/tasks/fonts.bundle.js',
   './gulp/tasks/favicons.js',
   './gulp/tasks/js.lint.js',
-  './gulp/tasks/css.lint.js',
-  './gulp/tasks/php.js',
+  './gulp/tasks/css.lint.js'
 ];

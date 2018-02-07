@@ -211,3 +211,17 @@
     border-right: 0.125rem solid rgba(255, 255, 255, 0.5);
   }
 }
+@include tablets-df {
+  .form__input {
+    height: 6rem;
+    font-size: 1.8rem;
+  }
+  .form__texarea {
+    height: 18rem;
+    font-size: 1.8rem;
+  }
+}
+@include phones-df {
+
+
+}

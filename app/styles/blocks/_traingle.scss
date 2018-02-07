@@ -10,4 +10,8 @@
   }
 }
 
-
+@include tablets-df {
+  .traingle--about .traingle__about-right {
+    fill: #ebefe2;
+  }
+}

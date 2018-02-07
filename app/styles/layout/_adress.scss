@@ -17,5 +17,19 @@
   margin-left: -19rem;
   margin-top: -19rem;
   transform: translateY(-50%);
+}
+
+@include tablets-df {
+  .adress__map {
+    min-height: 740px;
+  }
+  .adress__block {
+    margin-top: 0;
+  }
+}
+@include phones-df {
+  .adress__map {
+    min-height: 500px;
+  }
 
 }

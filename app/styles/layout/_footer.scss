@@ -21,7 +21,7 @@
 }
 .footer__socials {
   display: flex;
-  align-items: center
+  align-items: center;
 }
 .footer__quote {
 
@@ -45,11 +45,17 @@
   .footer {
     display: block;
   }
+  .footer__col {
+    padding: 2rem 1rem;
+  }
   .footer__col-left {
     flex-direction: row;
   }
   .footer__menu {
     margin-bottom: 0;
+  }
+  .footer__quote {
+    padding: 0 2rem;
   }
 }
 @include phones-df {
@@ -64,7 +70,7 @@
     display: block;
   }
   .footer__menu {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   .footer__socials {
     justify-content: center;

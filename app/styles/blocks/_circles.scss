@@ -65,3 +65,8 @@
   stroke-dasharray: 28.26 282.6;
 }
 
+@include tablets-df {
+  .circles {
+    stroke-width: 2.3rem;
+  }
+}

@@ -31,9 +31,37 @@
   padding: 0 1.4375rem;
   font-family: $font-base;
   font-size: 1.3rem;
+  font-weight: 700;
   color: #4e8839;
   text-align: center;
 }
 .skill__circles {
   display: block;
+}
+@include tablets-df {
+  .skills__group-name {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .skills__list {
+    justify-content: center;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .skills__item {
+    width: 14rem;
+    height: 14rem;
+    margin: 1.5rem;
+  }
+  .skills__name {
+    padding: 0 2rem;
+    font-size: 1.8rem;
+  }
+}
+@include phones-df {
+  .skills__item {
+    width: 16rem;
+    height: 16rem;
+  }
 }

@@ -36,3 +36,13 @@
   display: inline-block;
   vertical-align: top;
 }
+@include tablets-df {
+  .feedback {
+    height: auto;
+    min-height: 90rem;
+  }
+}
+@include phones-df {
+
+
+}

@@ -13,6 +13,7 @@ module.exports = function() {
       }))
       .pipe($.gp.pug({
         // locals: JSON.parse($.fs.readFileSync($.config.pageContent, "utf-8")),
+        outputStyle: 'expand',
         pretty: true
       }))
       .pipe($.gp.if(!$.dev, $.gp.htmlmin({collapseWhitespace: true})))

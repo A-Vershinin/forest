@@ -40,3 +40,21 @@
   display: inline-block;
   vertical-align: middle;
 }
+@include tablets-df {
+  .contacts {
+    //padding: 2rem 1.6rem;
+  }
+  .contacts__title {
+    margin-bottom: 2rem;
+  }
+  .contacts__list {
+    margin-top: -1rem;
+  }
+  .contacts__link {
+    padding: 1rem 0;
+    font-size: 1.8rem;
+  }
+}
+@include phones-df {
+
+}

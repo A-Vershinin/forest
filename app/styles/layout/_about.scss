@@ -23,3 +23,27 @@
 .about__skills-block {
   width: 100%;
 }
+@include tablets-df {
+  .about {
+    display: block;
+  }
+  .about__user-info,
+  .about__skills {
+    padding: 0 2rem 4rem 2rem;
+  }
+  .about__skills {
+    padding-top: 2rem;
+  }
+  .about__skills .page-text {
+   padding: 0 4rem;
+ }
+}
+@include phones-df {
+  .about__user-info,
+  .about__skills {
+    padding: 0 1rem 2rem 1rem;
+  }
+  .about__skills .page-text {
+    padding: 0 1rem;
+  }
+}

@@ -134,7 +134,7 @@
 
 //responsive mixins for desktop content
 @mixin desktop-big-df {
-  @media screen and #{($lg-point-df)} {
+  @media screen and #{($xlg-point-df)} {
     @content;
   }
 }
