@@ -1,9 +1,11 @@
+include ../blocks/_main-bg
 include ../blocks/_user
 include ../blocks/_socials
 include ../blocks/_traingle
   
-  
 header.header
+  .header__bg.parallax-bg.parallax-layer
+    +main-bg()
   .header__top
     .header__socials
       +socials()
@@ -12,7 +14,7 @@ header.header
         +icon("arrow__icon", "arrow-down", 26)
     .header__toggle
       include ../blocks/_hamburger
-  .header__bottom
+  .header__bottom.parallax-user
     +user("user--main")
   .header__bg-triangle
     +traingle() 

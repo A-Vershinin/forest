@@ -1,3 +1,4 @@
+
 function works () {
 
   const placeholder = $(".works__filter .placeholder a");
@@ -165,6 +166,14 @@ function works () {
     controls: {
       enable: false
     },
+    selectors: {
+      target: ".gallery__item"
+    },
+    animation: {
+      enable: true,
+      queueLimit: 2,
+      queue: true
+    },
     callbacks: {
       onMixStart: function () {
         failMessage.fadeOut(200);
@@ -174,7 +183,6 @@ function works () {
       }
     }
   });
-
 }
 
 export default works;

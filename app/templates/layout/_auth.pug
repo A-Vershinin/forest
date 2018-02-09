@@ -1,9 +1,9 @@
+include ../blocks/_main-bg
+include ../blocks/_copyright
+  
 section.auth
   .auth__bg
-    picture
-      source(type="image/webp" srcset="img/bg/forest-desctop@1x.webp 1x, img/bg/forest-desctop@2x.webp 2x")
-      img(src="img/bg/forest-desctop@1x.jpg" srcset="img/bg/forest-desctop@2x.jpg 2x"
-        alt="auth background", class="auth__bg-img")
+    +main-bg()
   .auth__box
     .auth__box-inner
       .auth__info
@@ -13,6 +13,4 @@ section.auth
         a(href="index.html").btn.auth__nav-link На главную
         a(href="auth.html").btn.auth__nav-link Войти
   .auth__copyright
-    .copyright
-      span.copyright__text &copy; Анатолий Вершинин
-      span.copyright__text 2017
+    +copyright()

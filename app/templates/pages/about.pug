@@ -1,4 +1,5 @@
 extends ../basic/_template
+include ../blocks/_main-bg
 include ../blocks/_menu
 include ../blocks/_socials
 include ../blocks/_user
@@ -14,6 +15,8 @@ block content
     |
     //include ../layout/_header
     header.header
+      .header__bg.parallax-bg.parallax-layer
+        +main-bg()
       .header__top
         .header__socials
           +socials()

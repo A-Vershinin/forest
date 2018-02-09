@@ -18,6 +18,7 @@
   box-sizing: border-box;
   cursor: text;
   box-shadow: rgba(147, 196, 46, 0.7) 0 0 0 0;
+  transition: all 0.35s;
   &:focus {
     border-color: $accent;
     box-shadow: rgba(147, 196, 46, 0.7) 0 0 1.5rem 0.2rem;
@@ -29,6 +30,7 @@
 }
 .textarea {
   height: 14rem;
+  max-height: 35rem;
   resize: vertical;
 }
   // checkbox

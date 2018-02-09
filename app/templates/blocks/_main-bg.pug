@@ -1,0 +1,16 @@
+mixin main-bg(modificator)
+  - var modificator = modificator || "";
+    
+  div(class=`main-bg ${modificator}`)
+    picture
+      source(type="image/webp" media="(max-width: 1200px)"
+      srcset="img/bg/forest-desctop@1x.webp 1x, img/bg/forest-desctop@2x.webp 2x")
+      source(media="(min-width: 1200px)"
+      srcset="img/bg/forest-desctop@1x.jpg 1x, img/bg/forest-desctop@2x.jpg 2x")
+      source(type="image/webp" media="(max-width: 768px)"
+      srcset="img/bg/forest-tablet@1x.webp 1x, img/bg/forest-tablet@2x.webp 2x")
+      source(media="(min-width: 768px)"
+      srcset="img/bg/forest-tablet@1x.jpg 1x, img/bg/forest-tablet@2x.jpg 2x")
+      source(type="image/webp" srcset="img/bg/forest-phone@1x.webp 1x, img/bg/forest-phone@2x.webp 2x")
+      img(src="img/bg/forest-phone@1x.jpg" srcset="img/bg/forest-phone@2x.jpg 2x"
+      alt="background", class="main-bg__img")

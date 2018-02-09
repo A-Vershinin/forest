@@ -2,6 +2,7 @@ import someModule from "./modules/someModule";
 import isJsAndTouchSupported from "./modules/isJsAndTouchSupported";
 import menu from "./modules/menu";
 import works from "./modules/works";
+import paralax from "./modules/paralax";
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -21,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
     works();
 
 
-
+    paralax();
 
 
 

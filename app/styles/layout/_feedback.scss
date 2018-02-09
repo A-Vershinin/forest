@@ -4,16 +4,16 @@
   //padding-top: 10rem;
   text-align: center;
   background-color: #dde3df;
-  background-image: url("../../img/bg/forest-bottom@1x.png");
-  background-image: url("../../img/bg/forest-bottom@1x.webp");
+  background-image: url("../img/bg/forest-bottom@1x.png");
+  background-image: url("../img/bg/forest-bottom@1x.webp");
   @extend %cover;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: column nowrap;
   @include retina {
-    background-image: url("../../img/bg/forest-bottom@2x.png");
-    background-image: url("../../img/bg/forest-bottom@2x.webp");
+    background-image: url("../img/bg/forest-bottom@2x.png");
+    background-image: url("../img/bg/forest-bottom@2x.webp");
   }
 }
 .feedback__inner {

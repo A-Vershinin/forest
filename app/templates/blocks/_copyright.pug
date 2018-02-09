@@ -1,3 +1,8 @@
-.copyright
-  span.copyright__text &copy; Анатолий Вершинин
-  span.copyright__text 2017
+mixin copyright(modificator)
+  - var modificator = modificator || "";
+    
+  div(class=`copyright ${modificator}`)
+    span.copyright__text &copy; Copyright 2017
+    span.copyright__text Разработал 
+      a(href="https://www.linkedin.com/in/anatoliy-vershinin-a7306395/" target="_blank", rel="noopener noreferrer").copyright__link Анатолий Вершинин
+    span.copyright__text Все права защищены

@@ -1,11 +1,10 @@
+include ../blocks/_main-bg
 include ../blocks/_user
-  
+include ../blocks/_copyright
+
 section.welcome
   .welcome__bg
-    picture
-      source(type="image/webp" srcset="img/bg/forest-desctop@1x.webp 1x, img/bg/forest-desctop@2x.webp 2x")
-      img(src="img/bg/forest-desctop@1x.jpg" srcset="img/bg/forest-desctop@2x.jpg 2x"
-       alt="wecolme background", class="welcome__bg-img")
+    +main-bg()
   .welcome__box
     .welcome__box-inner
       .welcome__info
@@ -17,5 +16,5 @@ section.welcome
         a(href="works.html").btn.welcome__nav-link Мои работы
         a(href="about.html").btn.welcome__nav-link Обо мне
   .welcome__copyright
-    include ../blocks/_copyright
+    +copyright()
     
