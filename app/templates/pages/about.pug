@@ -9,11 +9,8 @@ block content
 
   .wrapper.wrapper--about
     //HEADER
-    .wrapper__menu.wrapper__menu--vertical
-      +menu()
     |
     |
-    //include ../layout/_header
     header.header
       .header__bg.parallax-bg.parallax-layer
         +main-bg()
@@ -23,8 +20,11 @@ block content
         .header__arrow
           a(href="#").arrow-down Стрелка вниз
             +icon("arrow__icon", "arrow-down", 26)
-        .header__toggle
-          include ../blocks/_hamburger
+        .header__menu
+          .header__toggle
+            include ../blocks/_hamburger
+          .header__menu-wrapper
+            +menu("vertical")    
       .header__bottom
         +user("user--main")
       .header__bg-triangle

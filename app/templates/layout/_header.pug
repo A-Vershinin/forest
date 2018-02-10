@@ -2,6 +2,7 @@ include ../blocks/_main-bg
 include ../blocks/_user
 include ../blocks/_socials
 include ../blocks/_traingle
+include ../blocks/_menu
   
 header.header
   .header__bg.parallax-bg.parallax-layer
@@ -12,8 +13,11 @@ header.header
     .header__arrow
       a(href="#").arrow-down Стрелка вниз
         +icon("arrow__icon", "arrow-down", 26)
-    .header__toggle
-      include ../blocks/_hamburger
+    .header__menu
+      .header__toggle
+        include ../blocks/_hamburger
+      .header__menu-wrapper
+        +menu("vertical")
   .header__bottom.parallax-user
     +user("user--main")
   .header__bg-triangle

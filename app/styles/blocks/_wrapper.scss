@@ -25,25 +25,4 @@
   flex-basis: auto;
   //flex: 1 0 auto;
 }
-.wrapper__menu {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  min-height: 100vh;
-  background: rgba(108, 156, 90, 0.87);
-  z-index: 250;
-  transform: translateY(-100%);
-  transition: transform 1s ease;
-  &--show {
-    transform: translateY(0);
-  }
-}
-.wrapper__menu--vertical .menu__list {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
 

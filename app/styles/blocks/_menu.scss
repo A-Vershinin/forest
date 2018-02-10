@@ -64,6 +64,12 @@
     color: #ffffff;
   }
 }
+.menu--vertical .menu__list {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
 .menu--footer {
   & .menu__list {
     flex-flow: row wrap;
