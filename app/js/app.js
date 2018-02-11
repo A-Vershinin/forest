@@ -27,10 +27,15 @@ document.addEventListener("DOMContentLoaded", function() {
       parallaxBg();
     }
 
+    if (loadScript('.auth')) {
+      parallaxBg();
+    }
+
     if (loadScript('.feedback')) {
       window.onload = window.onresize = function () {
         moveFooter('.footer', '.feedback');
       };
+      parallaxBg();
     }
 
     if (loadScript('.works')) {

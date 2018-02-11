@@ -1,20 +1,31 @@
 .feedback {
   position: relative;
+  z-index: 50;
   height: 100vh;
-  //padding-top: 10rem;
-  //padding-bottom: 198px;
   text-align: center;
-  background-color: #dde3df;
-  background-image: url("../img/bg/forest-bottom@1x.png");
-  background-image: url("../img/bg/forest-bottom@1x.webp");
-  @extend %cover;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: column nowrap;
-  @include retina {
-    background-image: url("../img/bg/forest-bottom@2x.png");
-    background-image: url("../img/bg/forest-bottom@2x.webp");
+
+}
+.feedback__bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #dde3df;
+  overflow-y: hidden;
+  @extend %cover;
+  &.no-parallax {
+    background-image: url("../img/bg/forest-bottom@1x.png");
+    background-image: url("../img/bg/forest-bottom@1x.webp");
+    @include retina {
+      background-image: url("../img/bg/forest-bottom@2x.png");
+      background-image: url("../img/bg/forest-bottom@2x.webp");
+    }
   }
 }
 .feedback__inner {
@@ -23,16 +34,13 @@
   align-items: center;
   justify-content: center;
 }
-.feedback-form {
+.feedback__form {
   margin-bottom: 8rem;
   background-color: rgba(235, 239, 226, 0.6);
   border-radius: 0.5rem;
   overflow: hidden;
 }
 .feedback__arrow {
-  //position: absolute;
-  //z-index: 50;
-  //bottom: 4%;
   transform: rotate(180deg);
   display: inline-block;
   vertical-align: top;
@@ -42,7 +50,6 @@
   .feedback {
     height: auto;
     min-height: 90rem;
-    //padding-bottom: 198px;
   }
 }
 @include phones-df {

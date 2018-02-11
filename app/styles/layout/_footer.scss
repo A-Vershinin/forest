@@ -1,9 +1,9 @@
 .footer {
   position: relative;
+  z-index: 70;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  //margin-top: -198px;
 }
 .footer__col {
   display: flex;
@@ -43,16 +43,6 @@
     font-weight: 300;
   }
 }
-//@media screen and (max-width: 1120px) {
-//  .footer {
-//    margin-top: -241px;
-//  }
-//}
-//@include laptop-df {
-//  .footer {
-//    margin-top: -222px;
-//  }
-//}
 @include tablets-df {
   .footer {
     display: block;

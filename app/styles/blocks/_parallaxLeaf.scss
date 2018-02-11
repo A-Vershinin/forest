@@ -1,0 +1,30 @@
+.parallax-leaf {
+  position: absolute;
+  z-index: 20;
+  top: -3rem;
+  left: -3rem;
+  width: 107%;
+  height: 107%;
+  display: block;
+  @extend %cover;
+}
+.parallax-leaf-1 {
+  background-image: url("../img/decor/parallax/layer_1.png");
+  background-image: url("../img/decor/parallax/layer_1.webp");
+}
+.parallax-leaf-2 {
+  left: 15%;
+  background-image: url("../img/decor/parallax/layer_2.png");
+  background-image: url("../img/decor/parallax/layer_2.webp");
+}
+.parallax-leaf-3 {
+  left: -4%;
+  background-image: url("../img/decor/parallax/layer_3.png");
+  background-image: url("../img/decor/parallax/layer_3.webp");
+}
+.parallax-leaf-4 {
+  left: -15%;
+  top: 2%;
+  background-image: url("../img/decor/parallax/layer_4.png");
+  background-image: url("../img/decor/parallax/layer_4.webp");
+}
