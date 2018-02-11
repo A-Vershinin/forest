@@ -1,7 +1,9 @@
 .footer {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  //margin-top: -198px;
 }
 .footer__col {
   display: flex;
@@ -34,16 +36,27 @@
   text-align: center;
   background-color: rgba(99, 141, 85, 0.85);
   .copyright {
-    padding-top: 0.6rem;
-    padding-bottom: 0.6rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
   .copyright__text {
     font-weight: 300;
   }
 }
+//@media screen and (max-width: 1120px) {
+//  .footer {
+//    margin-top: -241px;
+//  }
+//}
+//@include laptop-df {
+//  .footer {
+//    margin-top: -222px;
+//  }
+//}
 @include tablets-df {
   .footer {
     display: block;
+    margin-top: -222px;
   }
   .footer__col {
     padding: 2rem 1rem;

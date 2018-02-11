@@ -2,7 +2,9 @@ import someModule from "./modules/someModule";
 import isJsAndTouchSupported from "./modules/isJsAndTouchSupported";
 import menu from "./modules/menu";
 import works from "./modules/works";
-import paralax from "./modules/paralax";
+import parallaxScroll from "./modules/parallaxScroll";
+import parallaxBg from "./modules/parallaxBg";
+import moveFooter from './modules/move-footer';
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -15,16 +17,41 @@ document.addEventListener("DOMContentLoaded", function() {
     // for SVG-elements in IE
     svg4everybody();
 
-    // toggleMenu
-    menu();
+    if (loadScript('.header')) {
+      menu();
+      parallaxScroll();
+      parallaxBg();
+    }
 
-    // grid and filter works
-    works();
+    if (loadScript('.welcome')) {
+      parallaxBg();
+    }
+
+    if (loadScript('.feedback')) {
+      window.onload = window.onresize = function () {
+        moveFooter('.footer', '.feedback');
+      };
+    }
+
+    if (loadScript('.works')) {
+      works(); // grid and filter works
+    }
 
 
-    paralax();
-
-
-
+    function loadScript(elem) {
+      return $(elem).length;
+    }
   })();
 });
+
+//запустить какую-либо функцию, если element существует на странице
+let forElement = function(element) {
+  return new Promise(function(resolve, reject) {
+    if(element) {
+      resolve();
+    } else {
+      reject();
+    }
+  });
+};
+

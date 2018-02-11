@@ -2,6 +2,7 @@
   position: relative;
   height: 100vh;
   //padding-top: 10rem;
+  //padding-bottom: 198px;
   text-align: center;
   background-color: #dde3df;
   background-image: url("../img/bg/forest-bottom@1x.png");
@@ -23,23 +24,25 @@
   justify-content: center;
 }
 .feedback-form {
-  margin-bottom: 4rem;
+  margin-bottom: 8rem;
   background-color: rgba(235, 239, 226, 0.6);
   border-radius: 0.5rem;
   overflow: hidden;
 }
 .feedback__arrow {
-  position: absolute;
-  z-index: 50;
-  bottom: 4%;
+  //position: absolute;
+  //z-index: 50;
+  //bottom: 4%;
   transform: rotate(180deg);
   display: inline-block;
   vertical-align: top;
 }
+
 @include tablets-df {
   .feedback {
     height: auto;
     min-height: 90rem;
+    //padding-bottom: 198px;
   }
 }
 @include phones-df {
