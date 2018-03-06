@@ -6,7 +6,7 @@ include ../blocks/_user
 include ../blocks/_traingle
   
 block content
-
+  include ../blocks/_preloader
   .wrapper.wrapper--about
     //HEADER
     |
@@ -18,7 +18,7 @@ block content
         .header__socials
           +socials()
         .header__arrow
-          a(href="#").arrow-down Стрелка вниз
+          a(href="#").arrow-down.js-arrow-down Стрелка вниз
             +icon("arrow__icon", "arrow-down", 26)
         .header__menu
           .header__toggle
@@ -51,3 +51,6 @@ block content
     |
     |
     include ../blocks/_popup
+
+block google-map
+  script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false")

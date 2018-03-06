@@ -3,7 +3,7 @@
   color: #ffffff;
 }
 .copyright__text {
-  flex: 2 0 100%;
+  //flex: 2 0 100%;
   font-size: 1.6rem;
   line-height: 1.8rem;
   font-family: $font-base;
@@ -42,12 +42,15 @@
     }
   }
 }
-
 @include phones-df {
   .copyright {
-
+    display: flex;
+    flex-direction: column;
   }
   .copyright__text {
-
+    margin-bottom: 1rem;
+    &:first-child {
+      order: 1;
+    }
   }
 }

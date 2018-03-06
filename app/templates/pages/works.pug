@@ -2,33 +2,40 @@ extends ../basic/_template
 include ../blocks/_menu
 
 block content
-  
+  include ../blocks/_preloader
   .wrapper
-    //HEADER
-    |
-    |
-    include ../layout/_header
-    //END HEADER
-    |
-    |
-    //MAIN CONTENT
-    main.content.content--works
-      |
-      h1.page-title Мои работы
+    
+      //HEADER
       |
       |
-      include ../layout/_works
+      include ../layout/_header
+      //END HEADER
       |
       |
-      include ../layout/_feedback
+      //MAIN CONTENT
+      main.content.content--works
+        |
+        h1.page-title#portfolio Мои работы
+        |
+        |
+        include ../layout/_works
+        |
+        |
+        
+        |
+        |
+        include ../layout/_feedback
+        |
+        |
+   
+      //END CONTENT
       |
       |
-    //END CONTENT
-    |
-    |
-    //MAIN FOOTER
-    include ../layout/_footer
-    //END FOOTER
-    |
-    |
-    include ../blocks/_popup
+      //MAIN FOOTER
+      |
+      include ../layout/_footer
+      |
+      //END FOOTER
+      |
+      |
+      include ../blocks/_popup

@@ -1,10 +1,11 @@
-'use strict';
-import isMobile from './isMobile';
+
+
+import isMobile from "./isMobile";
 
 // функция для parallax заднего фона
 function parallaxBg() {
-  const parallaxContainer = document.getElementsByClassName('wrapper')[0];
-  const layers = parallaxContainer.getElementsByClassName('parallax-layer');
+  const layersClass = "parallax-layer";
+  const layers = document.getElementsByClassName(layersClass);
   const noParallax = document.getElementsByClassName("no-parallax")[0];
 
   // промис который будет проверять наличие dom-элементов для параллакса на странице
@@ -35,12 +36,12 @@ function parallaxBg() {
         initialX = (window.innerWidth / 2) - pageX,
         initialY = (window.innerHeight / 2) - pageY;
 
-      [].slice.call(layers).forEach(function(layer, i) {
+      [].slice.call(layers).forEach((layer, i) => {
         let divider = (i + 1) / 70,
           positionX = initialX * divider,
           positionY = initialY * divider,
           layerStyle = layer.style,
-          transformString = 'translate3d(' + positionX + 'px, ' + positionY + 'px, 0)';
+          transformString = `translate3d(${positionX}px, ${positionY}px, 0)`;
 
         layerStyle.transform = transformString;
         layerStyle.msTransform = transformString;
@@ -50,13 +51,11 @@ function parallaxBg() {
       });
   });
 
-  window.addEventListener('mousemove', parallaxBg);
+  window.addEventListener("mousemove", parallaxBg);
 
-  if(isMobile.any()) {
-    wrapper.removeChild(layers);
-    // noParallax.className = "parallax bg_forest-bottom";
-    // wrapper.insertBefore(noParallax, document.getElementsByClassName("footer")[0]);
-
+  if (isMobile.any()) {
+    const arrLayers = Array.from(layers);
+    arrLayers.forEach(elem => elem.classList.remove(layersClass));
   } else {
     noParallaxBg(noParallax);
     window.addEventListener("mousemove", parallaxBg);

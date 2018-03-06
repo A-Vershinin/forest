@@ -25,6 +25,7 @@
     "stylelint": "stylelint app/styles/**/*.scss --syntax scss",
     "stylelintfix": "stylelint app/styles/**/*.scss --fix",
     "eslint": "eslint app/js/**/*.js",
+    "eslintformat": "eslint --format node_modules/eslint-friendly-formatter app/js/**/*.js",
     "eslintfix": "eslint app/js/**/*.js --fix",
     "start": "set NODE_ENV=development&& gulp",
     "build": "set NODE_ENV=production&& gulp"

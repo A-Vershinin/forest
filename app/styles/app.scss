@@ -14,13 +14,11 @@
 
 // BEM-блоки //
 // index.html
-@import "layout/content";
 @import "blocks/_wrapper.scss";
 @import "blocks/_btn.scss";
 @import "blocks/_form.scss";
 @import "blocks/_socials.scss";
 @import "blocks/_menu.scss";
-//@import "blocks/_scrollup.scss";
 @import "blocks/_user.scss";
 @import "blocks/_copyright.scss";
 @import "blocks/_form-auth.scss";
@@ -37,14 +35,16 @@
 @import "blocks/_filters.scss";
 @import "blocks/_main-bg.scss";
 @import "blocks/_parallaxLeaf.scss";
+@import "./blocks/preloader.scss";
 
 
 // layout-секции //
-@import "./layout/_header.scss";
-@import "./layout/_footer.scss";
-@import "./layout/_welcome.scss";
-@import "./layout/_auth.scss";
-@import "./layout/_works.scss";
-@import "./layout/_feedback.scss";
-@import "./layout/_about.scss";
-@import "./layout/_adress.scss";
+@import "layout/content";
+@import "layout/_header.scss";
+@import "layout/_footer.scss";
+@import "layout/_welcome.scss";
+@import "layout/_auth.scss";
+@import "layout/_works.scss";
+@import "layout/_feedback.scss";
+@import "layout/_about.scss";
+@import "layout/_adress.scss";

@@ -4,10 +4,13 @@ import menu from "./modules/menu";
 import works from "./modules/works";
 import parallaxScroll from "./modules/parallaxScroll";
 import parallaxBg from "./modules/parallaxBg";
-import moveFooter from './modules/move-footer';
+import moveFooter from "./modules/move-footer";
+import googleMap from "./modules/google.map";
+import arrowScroll from "./modules/arrowScroll";
+import preloader from "./modules/preloader";
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
   (function() {
     someModule("start js code");
 
@@ -17,46 +20,52 @@ document.addEventListener("DOMContentLoaded", function() {
     // for SVG-elements in IE
     svg4everybody();
 
-    if (loadScript('.header')) {
+    preloader();
+
+    if (loadScript(".header")) {
       menu();
       parallaxScroll();
       parallaxBg();
+      arrowScroll();
     }
 
-    if (loadScript('.welcome')) {
+    if (loadScript(".welcome")) {
       parallaxBg();
     }
 
-    if (loadScript('.auth')) {
+    if (loadScript(".auth")) {
       parallaxBg();
     }
 
-    if (loadScript('.feedback')) {
+    if (loadScript(".feedback")) {
       window.onload = window.onresize = function () {
-        moveFooter('.footer', '.feedback');
+        moveFooter(".footer", ".feedback");
       };
-      parallaxBg();
     }
 
-    if (loadScript('.works')) {
+    if (loadScript(".works")) {
       works(); // grid and filter works
+    }
+
+    if (loadScript(".adress")) {
+      googleMap();
     }
 
 
     function loadScript(elem) {
       return $(elem).length;
     }
-  })();
+  }());
 });
 
-//запустить какую-либо функцию, если element существует на странице
-let forElement = function(element) {
-  return new Promise(function(resolve, reject) {
-    if(element) {
+// запустить какую-либо функцию, если element существует на странице
+const forElement = function(element) {
+  return new Promise(((resolve, reject) => {
+    if (element) {
       resolve();
     } else {
       reject();
     }
-  });
+  }));
 };
 

@@ -31,6 +31,7 @@
 }
 .header__top {
   margin: 3rem;
+  height: 5.2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -97,11 +98,11 @@
 }
 
 @include laptop {
-
+  .header {
+    min-height: auto;
+  }
 }
 @include tablets-df {
-
 }
 @include phones-df {
-
 }

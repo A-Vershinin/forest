@@ -46,7 +46,8 @@
 @include tablets-df {
   .footer {
     display: block;
-    margin-top: -222px;
+    //min-height: 460px;
+    //margin-top: -222px;
   }
   .footer__col {
     padding: 2rem 1rem;
@@ -62,6 +63,10 @@
   }
 }
 @include phones-df {
+  .footer {
+    //min-height: 460px;
+    //margin-top: -222px;
+  }
   .footer__col {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;

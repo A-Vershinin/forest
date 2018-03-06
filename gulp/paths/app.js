@@ -6,5 +6,6 @@
 // ];
 module.exports = {
   src: "./app/js/",
+  modules: "./app/js/**/*.js",
   bundles: ["app.js"],
 };

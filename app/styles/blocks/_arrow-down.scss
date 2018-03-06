@@ -8,11 +8,21 @@
       fill: rgba(#ffffff, 1);
     }
   }
+  &--bot {
+    .arrow__icon {
+      fill: rgba(#000000, 0.3);
+    }
+    &:hover {
+      .arrow__icon {
+        fill: rgba(#000000, 0.5);
+      }
+    }
+  }
 }
 .arrow__icon {
   display: block;
   fill: rgba(#ffffff, 0.7);
-  transition: 0.2s ease;
+  transition: 0.15s ease;
   svg {
     width: 2.7rem;
     height: 2.7rem;
